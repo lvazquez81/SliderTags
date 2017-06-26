@@ -33,9 +33,9 @@
 
 			#btnChild.glow {
 
-				-webkit-box-shadow: 0 0 40px orange;
-				   -moz-box-shadow: 0 0 40px orange;
-						box-shadow: 0 0 40px orange;
+				-webkit-box-shadow: 0 0 20px orange;
+				   -moz-box-shadow: 0 0 20px orange;
+						box-shadow: 0 0 20px orange;
 			}
 
 	</style>
@@ -71,12 +71,10 @@
 	
 	<script>
 		$("#btnParent").click(function() {
-			$('#btnChild').css('color','red');
-			$('#btnChild').addClass('glow');
-		});
-		
-		$("#btnParent").mouseleave(function() {
-			$('#btnChild').removeClass('glow');
+			//$( "#btnChild" ).slideUp( 300 ).delay( 800 ).fadeIn( 400 );
+			$("#btnChild").addClass("glow").delay(3000).queue(function(){
+				$(this).removeClass("glow").dequeue();
+			});
 		});
 	</script>
 
