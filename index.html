@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <title>Category</title>
+
+    <!-- Bootstrap Core CSS -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+	<script src="https://use.fontawesome.com/def8825fff.js"></script>
+    
+	<!-- Custom CSS -->
+ 
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+        <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+        <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+	
+	<style type="text/css">
+		#btnChild {
+			-webkit-transition: border 1s linear, box-shadow 1s linear;
+			   -moz-transition: border 1s linear, box-shadow 1s linear;
+					transition: border 1s linear, box-shadow 1s linear;
+		}
+
+			#btnChild.glow {
+
+				-webkit-box-shadow: 0 0 40px orange;
+				   -moz-box-shadow: 0 0 40px orange;
+						box-shadow: 0 0 40px orange;
+			}
+
+	</style>
+
+</head>
+
+<body>
+
+    <!-- Page Content -->
+    <div class="container">
+
+        <div class="row">
+            <div class="col-lg-12 text-center">
+                <h1>My Day</h1>
+				<div id="buttonContainer" >
+					<button id="btnParent" type="button" class="btn btn-default" >Parent</button>
+					<i class="fa fa-arrow-right" aria-hidden="true"></i>
+					<button id="btnChild" type="button" class="btn btn-default" >Child</button>
+				</div>
+                
+            </div>
+        </div>
+        <!-- /.row -->
+
+    </div>
+    <!-- /.container -->
+
+    <!-- jQuery Version 1.11.1 -->
+    <script src="js/jquery.js"></script>
+
+    <!-- Bootstrap Core JavaScript -->
+    <script src="js/bootstrap.min.js"></script>
+	
+	<script>
+		$("#btnParent").click(function() {
+			$('#btnChild').css('color','red');
+			$('#btnChild').addClass('glow');
+		});
+		
+		$("#btnParent").mouseleave(function() {
+			$('#btnChild').removeClass('glow');
+		});
+	</script>
+
+</body>
+
+</html>
