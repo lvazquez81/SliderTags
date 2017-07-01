@@ -9,7 +9,7 @@
     <meta name="description" content="">
     <meta name="author" content="">
 
-    <title>Category</title>
+    <title>Playing Around</title>
 
     <!-- Bootstrap Core CSS -->
     <link href="css/bootstrap.min.css" rel="stylesheet">
@@ -61,7 +61,8 @@
 
         <div class="row">
             <div class="col-lg-12 text-center">
-                <h1>My Day</h1>
+                <h1>Look!</h1>
+				<button id="btnDoTheThing" type="button" class="btn btn-default">Do The Thing</button>
 				<div id="buttonContainer" >
 					<button id="btnParent" type="button" class="btn btn-default" >Parent</button>
 					<i class="fa fa-arrow-right" aria-hidden="true"></i>
@@ -89,6 +90,10 @@
 				$(this).removeClass("glow").dequeue();
 				$("#btnChild").transition({ x: '0px' });
 			});
+		});
+		
+		$("#btnDoTheThing").click(function() {
+			$("#buttonContainer").transition({x:'100px'}).delay(1000).transition({x:'0px'});
 		});
 	</script>
 
